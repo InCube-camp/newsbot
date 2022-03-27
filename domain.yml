@@ -1,0 +1,28 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- bot_challenge
+- ask_news
+- ask_headlines
+entities:
+- topic
+responses:
+  utter_goodbye:
+  - text: Good Bye
+  - text: Have a nice day!
+  - text: Take care
+  utter_capability:
+  - text: I can fetch your prefered news for you
+  - text: I can keep you uptodate in your prefered domain
+  utter_iamabot:
+  - text: I am NewsBot
+actions:
+- action_greet
+- utter_goodbye
+- utter_capability
+- utter_iamabot
+- action_headlines
+- action_specific_news

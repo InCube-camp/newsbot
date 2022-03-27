@@ -1,0 +1,75 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - hey there
+    - hi again
+    - hi folks
+    - hi Mister
+    - hi pal!
+    - greetings
+    - hello is anybody there
+    - hello robot
+    - hallo
+    - heeey
+    - hi hi
+    - hey hey
+    - hello there
+    - yo
+    - hola
+    - hi?
+    - hey bot!
+    - hello friend
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+    - ok then
+    - see you
+    - see ya
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: ask_headlines
+  examples: |
+    - What are today's headlines
+    - Tell me about today
+    - update me
+    - update me about today
+- intent: ask_news
+  examples: |
+    - [WWIII](topic) updates
+    - tell me about [russia](topic)
+    - [IPL](topic) updates
+    - news about [General Electronics](topic)
+    - Tell me about [target](topic)
+    - What's new in [eli lilly](topic)
+    - [General Electronics](topic) updates
+    - any update on [cryptocurrency](topic)
+    - tell me about [IPL](topic)
+
+- lookup: topic
+  examples: |
+    - facebook
+    - ukraine
+    - punjab
+    - covid
+    - omnicorn
+    - election
+    - kashmir
+    - kashmir files
+    - modi
+    - putin
+    - vladmir putin
+    - biden
+    - world war

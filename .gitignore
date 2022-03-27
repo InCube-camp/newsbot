@@ -1,0 +1,6 @@
+models/
+*.db
+*.db-shm
+*.db-wal
+.DS_Store
+__pycache__/
