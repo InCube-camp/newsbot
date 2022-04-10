@@ -34,7 +34,6 @@ from rasa_sdk.executor import CollectingDispatcher
 
 from datetime import datetime
 from .config import news_api as news
-from .config import userName, customer
 
 
 class ActionGreet(Action):
@@ -55,7 +54,7 @@ class ActionGreet(Action):
         else:
             day = 'Evening'
 
-        dispatcher.utter_message(text=f"Hello {userName}! Good {day}")
+        dispatcher.utter_message(text=f"Hello! Good {day}")
 
         return []
 
