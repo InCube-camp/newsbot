@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Bot</title>
+</head>
+
+<body>
+  <!-- https://chat-widget-docs.rasa.com/ -->
+  <div id="rasa-chat-widget" data-websocket-url="http://localhost:5005"
+    data-avatar-url="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png" data-height="500">
+  </div>
+  <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+
+
+  <!-- <div id="webchat">
+    <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"></script>
+    <script>
+      WebChat.default({
+        selector: '#webchat',
+        initPayload: "/get_started",
+        interval: 1000,
+        socketUrl: "http://localhost:5005",
+        socketPath: "/socket.io/",
+        title: "NewsBot",
+        inputTextFieldHint: "Type a message...",
+        connectingText: "Waiting for server...",
+        hideWhenNotConnected: false,
+        // fullScreenMode: true,
+        profileAvatar: "https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png",
+        // openLauncherImage: '/static/bot.png',
+        // closeLauncherImage: '/static/bot.png',
+        params: {
+          images: {
+            dims: {
+              width: 300,
+              height: 200,
+            }
+          },
+          storage: "session"
+        }
+      })
+    </script>
+  </div> -->
+</body>
+
+</html>

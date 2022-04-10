@@ -1,7 +1,7 @@
+import os
 from newsapi import NewsApiClient
 
-__api_key = 'f70b9ed1b31e4f558c539e2a83c5b373'
+env_key = 'NEWSAPI_KEY'
+__api_key = os.getenv(env_key)
 news_api = NewsApiClient(api_key=__api_key)
 
-userName = 'Satya'
-customer = 'TCS'

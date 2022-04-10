@@ -1,0 +1,2 @@
+rasa==2.8.3
+newsapi-python==0.2.6

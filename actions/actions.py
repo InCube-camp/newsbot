@@ -60,19 +60,6 @@ class ActionGreet(Action):
         return []
 
 
-# class ActionIdentity(Action):
-
-#     def name(self) -> Text:
-#         return "action_iamabot"
-
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-#         dispatcher.utter_message(text=f"I am NewsBot 4.0 - Customized for {customer}")
-#         return []
-
-
 class ActionHeadlines(Action):
 
     def name(self) -> Text:
@@ -109,7 +96,6 @@ class ActionSpecificNews(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        print(tracker)
         q = (tracker.latest_message['entities'] or [{}])[0].get('value')
         news_items = news.get_everything(q=q, sort_by='relevancy')
         if news_items.get('totalResults', 0) > 0:
@@ -124,7 +110,7 @@ class ActionSpecificNews(Action):
             source = article['source']['name']
 
             message = f'{title}\n[see more]({url})'
-            dispatcher.utter_message(text=message, image=image_url)
+            dispatcher.utter_message(image=image_url, text=message)
         else:
             dispatcher.utter_message(text=f'No recent news on the topic *{q or ""}*.')
 
